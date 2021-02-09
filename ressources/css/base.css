@@ -28,17 +28,17 @@ div.nav{
     padding: 10px 50px;
     margin: 5px 0;
 }
-a{
+a.nav-link{
     text-decoration: none;
     outline: none;
 }
-a:link{
+a.nav-link:link{
     color: #3E3E3E;
 }
-a:visited{
+a.nav-link:visited{
     color: #3E3E3E;
 }
-a:hover{
+a.nav-link:hover{
     background-color: #8A8A8A;
     color: #F7F7F7;
 }
