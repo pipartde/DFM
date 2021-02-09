@@ -25,14 +25,22 @@ div.nav{
 }
 .nav-link{
     background-color: #F7F7F7;
-    padding: 10px 20px;
-    margin: 5px;
+    padding: 10px 50px;
+    margin: 5px 0;
 }
-.nav-link a{
-    margin-left: 30px;
-}
-.nav a:link{
+a{
     text-decoration: none;
+    outline: none;
+}
+a:link{
+    color: #3E3E3E;
+}
+a:visited{
+    color: #3E3E3E;
+}
+a:hover{
+    background-color: #8A8A8A;
+    color: #F7F7F7;
 }
 .box-logo{
     display: flex;
@@ -127,4 +135,11 @@ h3{
 }
 span.selected{
     padding: 0 10px;
+}
+
+td{
+    font-size: 15px;
+    font-weight: normal;
+    color: #8a8a8a;
+    padding: 5px;
 }

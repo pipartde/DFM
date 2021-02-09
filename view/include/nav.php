@@ -12,8 +12,7 @@
     </div>
 
     <div class="box-nav">
-        <div class="nav-link">
-            <a href="stock.php">
+        <a class="nav-link" href="stock.php">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                      viewBox="0 0 318 299.4" style="enable-background:new 0 0 318 299.4;" xml:space="preserve"
@@ -44,16 +43,15 @@
                     </g>
                 </svg>
                 Stock
-            </a>
-        </div>
+        </a>
 
-        <div class="nav-link"><a href="#">Admin</a></div>
-        <div class="nav-link"><a href="#">Log In</a></div>
-        <div class="nav-link"><a href="#">New Stock</a></div>
-        <div class="nav-link"><a href="#">New Project</a></div>
-        <div class="nav-link"><a href="#">Détail Stock</a></div>
-        <div class="nav-link"><a href="#">Détail Project</a></div>
-        <div class="nav-link"><a href="#">Logs</a></div>
+        <a class="nav-link" href="#">Admin</a>
+        <a class="nav-link" href="#">Log In</a>
+        <a class="nav-link" href="#">New Stock</a>
+        <a class="nav-link" href="#">New Project</a>
+        <a class="nav-link" href="#">Détail Stock</a>
+        <a class="nav-link" href="#">Détail Project</a>
+        <a class="nav-link" href="#">Logs</a>
     </div>
 
 </div>
