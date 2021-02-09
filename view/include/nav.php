@@ -3,29 +3,28 @@
 
 <div class="nav">
 
-    <div>
-        <img class="logo" src="../ressources/ing/logo_color.png" alt="logo">
-        <p>
-            <span class="logo-text first">Don't Forget Me</span>
-            <span class="logo-text wavre">by Wavre</span>
+    <div class="box-logo">
+        <a href="#"><img class="logo" src="../ressources/img/logo_color.png" alt="logo"></a>
+        <p class="box-logo">
+            <span class="logo-text-DFM">Don't Forget Me</span>
+            <span class="logo-text-wavre">by Wavre</span>
         </p>
     </div>
 
-
-
-
-    <ul>
-        <li>
-            <button class="btn-nav"><a href="../stock.php"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                                viewBox="0 0 318 299.4" style="enable-background:new 0 0 318 299.4;" xml:space="preserve" width="18px">
+    <div class="box-nav">
+        <div class="nav-link">
+            <a href="stock.php">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 318 299.4" style="enable-background:new 0 0 318 299.4;" xml:space="preserve"
+                     width="18px">
                     <style type="text/css">
                         .st1 {
                             fill: #168292;
                         }
                     </style>
-                        <g>
-                            <path class="st1" d="M318,10.8c0.1-1.3,0-2.7-0.5-4C316.1,2.7,312.3,0,308,0H90c-2.2,0-4.3,0.7-6.1,2.1l-80,61.4c-0.1,0-0.1,0.1-0.1,0.1
+                    <g>
+                        <path class="st1" d="M318,10.8c0.1-1.3,0-2.7-0.5-4C316.1,2.7,312.3,0,308,0H90c-2.2,0-4.3,0.7-6.1,2.1l-80,61.4c-0.1,0-0.1,0.1-0.1,0.1
                         c-0.1,0.1-0.2,0.1-0.3,0.2c-0.1,0.1-0.3,0.3-0.4,0.4c-0.1,0.1-0.1,0.1-0.2,0.2c-0.2,0.2-0.3,0.3-0.5,0.5c0,0.1-0.1,0.1-0.1,0.2
                         c-0.2,0.2-0.4,0.5-0.5,0.7c0,0.1-0.1,0.1-0.1,0.2c-0.1,0.2-0.2,0.4-0.3,0.5c-0.1,0.1-0.1,0.2-0.2,0.3C1,66.9,1,67.1,0.9,67.3
                         c-0.1,0.1-0.1,0.2-0.2,0.4c-0.1,0.2-0.1,0.3-0.2,0.5c0,0.1-0.1,0.2-0.1,0.3c-0.1,0.3-0.1,0.5-0.2,0.8c0,0.1,0,0.2-0.1,0.3
@@ -38,18 +37,23 @@
                         c0.4,0.1,0.8,0.1,1.1,0.1c1.6,0,3.3-0.6,4.5-1.7c1.6-1.3,2.5-3.3,2.5-5.3V81.4h58v198h-58V217c0-3-1.4-5.9-3.7-7.8
                         c-2.3-1.9-5.4-2.6-8.3-2l-27,5.6l-27-5.6c-2.9-0.6-6,0.1-8.3,2c-2.3,1.9-3.7,4.7-3.7,7.8v62.4H20V81.4z M102,279v-49.7l17,3.5
                         c1.3,0.3,2.7,0.3,4.1,0l17-3.5V279H102z M298,224.4l-60,45v-193l60-45V224.4z"/>
-                            <path class="st1" d="M282,88c2.8,0,5-2.2,5-5V65c0-2.8-2.2-5-5-5s-5,2.2-5,5v18C277,85.8,279.2,88,282,88z"/>
-                            <path class="st1" d="M282,181c2.8,0,5-2.2,5-5v-66.6c0-2.8-2.2-5-5-5s-5,2.2-5,5V176C277,178.8,279.2,181,282,181z"/>
-                        </g>
-                </svg> Stock</a></button>
-        </li>
-        <li><a href="#">Admin</a></li>
-        <li><a href="#">Log In</a></li>
-        <li>New Stock</li>
-        <li>New Project</li>
-        <li>Détail Stock</li>
-        <li>Détail Project</li>
-        <li>Logs</li>
-    </ul>
+                        <path class="st1"
+                              d="M282,88c2.8,0,5-2.2,5-5V65c0-2.8-2.2-5-5-5s-5,2.2-5,5v18C277,85.8,279.2,88,282,88z"/>
+                        <path class="st1"
+                              d="M282,181c2.8,0,5-2.2,5-5v-66.6c0-2.8-2.2-5-5-5s-5,2.2-5,5V176C277,178.8,279.2,181,282,181z"/>
+                    </g>
+                </svg>
+                Stock
+            </a>
+        </div>
+
+        <div class="nav-link"><a href="#">Admin</a></div>
+        <div class="nav-link"><a href="#">Log In</a></div>
+        <div class="nav-link"><a href="#">New Stock</a></div>
+        <div class="nav-link"><a href="#">New Project</a></div>
+        <div class="nav-link"><a href="#">Détail Stock</a></div>
+        <div class="nav-link"><a href="#">Détail Project</a></div>
+        <div class="nav-link"><a href="#">Logs</a></div>
+    </div>
 
 </div>
