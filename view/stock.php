@@ -60,7 +60,7 @@
                     <option value="///">///</option>
                 </select>
                 <select id="get_value_marque" name="marque">
-                    <option value="">Musique</option>
+                    <option value="">Marque</option>
                     <option value="///">///</option>
                 </select>
                 <select id="get_value_name" name="name">
@@ -100,7 +100,6 @@
                     <strong></strong>
                 </span>
             </div>
-
         </div>
 
         <div class="result">

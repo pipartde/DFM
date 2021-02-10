@@ -56,3 +56,19 @@ $('#get_value_status').selectric().on('change', function() {
 $('#get_value_project').selectric().on('change', function() {
     $selectValueProject.text($(this).val());
 });
+
+
+function resetSearch($getvalue,$selectvalue,$text) {
+    $($getvalue).selectric();
+
+    $($selectvalue).on('click', function () {
+        $($getvalue).prop('selectedIndex', 0).selectric('refresh');
+        $text.text('');
+    });
+}
+resetSearch('#get_value_category', '#select_value_category',$selectValueCategory);
+resetSearch('#get_value_type', '#select_value_type',$selectValueType);
+resetSearch('#get_value_marque', '#select_value_marque',$selectValueMarque);
+resetSearch('#get_value_name', '#select_value_name',$selectValueName);
+resetSearch('#get_value_status', '#select_value_status',$selectValueStatus);
+resetSearch('#get_value_project', '#select_value_project',$selectValueProject);
