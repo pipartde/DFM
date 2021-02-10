@@ -8,24 +8,22 @@ body{
 }
 div.stock{
     padding: 40px 40px 40px 60px;
-    width: calc(100% - 220px);
+    width: calc(100% - 280px);
     margin: 0 auto;
     background-color: #F7F7F7;
 
 }
 div.nav{
-    padding: 30px 10px 60px 10px;
-    min-width: 220px;
-
+    padding: 60px 30px 60px 30px;
+    min-width: 280px;
 }
 .box-nav{
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
 }
 .nav-link{
     background-color: #F7F7F7;
-    padding: 10px 50px;
+    padding: 18px 75px;
     margin: 5px 0;
     display: flex;
     align-items: center;
@@ -42,25 +40,25 @@ a.nav-link:visited{
     color: #3E3E3E;
 }
 a.nav-link:hover{
-    background-color: #8A8A8A;
-    color: #F7F7F7;
+    background-color: #FFFFFF;
 }
 .box-logo{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    margin: 10px 0 50px 0;
 }
 .logo{
-    width: 50px;
+    width: 56px;
 }
 
 .logo-text-DFM{
     color: #168292;
-    font-size: 22px;
+    font-size: 32px;
 }
 .logo-text-wavre{
     color: #99CD33;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 div.searchBar{
@@ -106,8 +104,8 @@ h3{
 }
 .svg-nav{
     fill: #168292;
-    width: 20px;
-    height: 20px;
+    width: 26px;
+    height: 26px;
 }
 .inlign-resultat{
     display: flex;
@@ -153,5 +151,8 @@ td{
 }
 
 .link{
-    padding-left: 5px;
+    padding-left: 17px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #4B4B4B;
 }

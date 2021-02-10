@@ -20,8 +20,6 @@ function callPrintCss() {
 }
 
 
-
-
 // Cache the target element
 var $selectValueCategory = $('#select_value_category').find('strong');
 var $selectValueType = $('#select_value_type').find('strong');
