@@ -101,6 +101,10 @@ h3{
     fill: #168292;
     width: 20px;
 }
+.svg-nav{
+    fill: #168292;
+    width: 18px;
+}
 .inlign-resultat{
     display: flex;
     justify-content: flex-start;

@@ -1,3 +1,19 @@
-table{
-    background-color: red;
+body{
+    background-color: transparent;
+}
+.nav{
+    display: none;
+}
+.header{
+    display: none;
+}
+.form-tri{
+    display: none;
+}
+.inlign-searchBar{
+    display: none;
+}
+.svg{
+    display: none;
+    /* ou alors je défini une taille ? */
 }

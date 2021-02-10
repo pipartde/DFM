@@ -9,13 +9,13 @@
     <title>DFM - Gestion de stock</title>
 
     <!-- Reset CSS -->
-    <link href="../ressources/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../ressources/css/reset.css" rel="stylesheet" type="text/css" media="screen">
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet" media="screen">
 
     <!-- Import CSS -->
-    <link href="../ressources/css/base.css" rel="stylesheet" type="text/css">
+    <link href="../ressources/css/base.css" rel="stylesheet" type="text/css" media="screen">
     <link rel="stylesheet" href="../ressources/css/selectric.css">
 
 </head>

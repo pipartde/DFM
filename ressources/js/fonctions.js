@@ -14,7 +14,9 @@ function callPrintCss() {
     print_css.href = "../ressources/css/print.css";
     print_css.rel = "stylesheet";
     print_css.type = "text/css";
+    print_css.media = "print";
     document.getElementsByTagName("head")[0].appendChild(print_css);
+    setTimeout(function () {window.print();},500) // 0.5 seconde
 }
 
 
