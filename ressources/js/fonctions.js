@@ -7,6 +7,18 @@ function TotalResearch() {
 }
 TotalResearch();
 
+// ajout feuille de style print.css onClick()
+
+function callPrintCss() {
+    var print_css = document.createElement('link');
+    print_css.href = "../ressources/css/print.css";
+    print_css.rel = "stylesheet";
+    print_css.type = "text/css";
+    document.getElementsByTagName("head")[0].appendChild(print_css);
+}
+
+
+
 
 // Cache the target element
 var $selectValueCategory = $('#select_value_category').find('strong');

@@ -107,7 +107,7 @@
 
             <div class="inlign-resultat">
 
-                <div class="logo-print">
+                <div class="logo-print" onclick="callPrintCss();">
                     <a href="#">
                         <svg version="1.1" id="Capa_1" class="svg svg-print" xmlns="http://www.w3.org/2000/svg"
                              xmlns:xlink="http://www.w3.org/1999/xlink"
