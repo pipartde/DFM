@@ -78,24 +78,27 @@
             </form>
 
             <div class="inline-selector">
-            <span class="selected" id="select_value_category">
-                Valeur(s) choisie(s) : <strong></strong>
-            </span>
+                <span class="selected">
+                    Valeur(s) choisie(s) :
+                </span>
+                <span class="selected" id="select_value_category">
+                    <strong></strong>
+                </span>
                 <span class="selected" id="select_value_type">
-                <strong></strong>
-            </span>
+                    <strong></strong>
+                </span>
                 <span class="selected" id="select_value_marque">
-                <strong></strong>
-            </span>
+                    <strong></strong>
+                </span>
                 <span class="selected" id="select_value_name">
-                <strong></strong>
-            </span>
+                    <strong></strong>
+                </span>
                 <span class="selected" id="select_value_status">
-                <strong></strong>
-            </span>
+                    <strong></strong>
+                </span>
                 <span class="selected" id="select_value_project">
-                <strong></strong>
-            </span>
+                    <strong></strong>
+                </span>
             </div>
 
         </div>
@@ -153,7 +156,7 @@
                 </svg>
 
                 <h3>
-                    Résultats<span class="text-info"> | XXX résultat(s) trouvé(s)</span>
+                    Résultats<span id="nbrResult" class="text-info"> | </span><span class="text-info"> résultat(s) trouvé(s)</span>
                 </h3>
 
             </div>
@@ -174,7 +177,19 @@
                     <th>Projet</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody id="checkNumber">
+                <tr>
+                    <td>0001</td>
+                    <td>100</td>
+                    <td>Ordinateur</td>
+                    <td>Portable</td>
+                    <td>Fujitsu</td>
+                    <td>HDC70 - Celsius Pro</td>
+                    <td>20-11-2020</td>
+                    <td>Disponible</td>
+                    <td>En stock</td>
+                    <td>Réparation</td>
+                </tr>
                 <tr>
                     <td>0001</td>
                     <td>100</td>
@@ -198,7 +213,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../ressources/js/jquery.selectric.js"></script>
-<script src="../ressources/js/select.js"></script>
+<script src="../ressources/js/fonctions.js"></script>
 
 </body>
 </html>

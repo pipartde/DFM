@@ -1,3 +1,13 @@
+function TotalResearch() {
+    var tbody = document.getElementById('checkNumber');
+    var trNbr = tbody.getElementsByTagName('tr');
+    var num = trNbr.length;
+    var result = document.getElementById('nbrResult');
+    result.innerHTML += num;
+}
+TotalResearch();
+
+
 // Cache the target element
 var $selectValueCategory = $('#select_value_category').find('strong');
 var $selectValueType = $('#select_value_type').find('strong');
