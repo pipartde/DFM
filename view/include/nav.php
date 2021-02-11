@@ -11,8 +11,8 @@
         </p>
     </div>
 
-    <div class="box-nav">
-        <a class="nav-link" href="stock.php">
+    <div class="box-nav" id="myBoxNav">
+        <a class="nav-link nav-link-stock" href="stock.php">
             <svg version="1.1" class="svg-nav svg-nav-stock" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                  viewBox="0 0 318 299.4" style="enable-background:new 0 0 318 299.4;" xml:space="preserve">
@@ -37,6 +37,10 @@
             <span class="link">
                 Stock
             </span>
+            <a href="javascript:void(0);" style="font-size:15px;" class="menu" onclick="myFunction()">
+                <svg height="384pt" viewBox="0 -53 384 384"  class="svg-nav svg-nav-menu" width="384pt" xmlns="http://www.w3.org/2000/svg"><path d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/><path d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/><path d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/></svg>
+            </a>
+
         </a>
 
         <a class="nav-link" href="#">
@@ -46,7 +50,7 @@
             </span>
         </a>
 
-        <a class="nav-link nav-link-login" href="#">
+        <a class="nav-link" href="#">
             <svg id="Capa_1"  class="svg-nav svg-nav-login" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg"><path d="m499.462 0h-378.902c-9.52 0-17.223 7.703-17.223 17.223v51.668h34.446v-34.445h344.456v482.239h-344.456v-34.446h-34.446v51.668c0 9.52 7.703 17.223 17.223 17.223h378.902c9.52 0 17.223-7.703 17.223-17.223v-516.684c0-9.52-7.704-17.223-17.223-17.223z"/><path d="m204.588 366.725 24.354 24.354 115.514-115.514-115.514-115.514-24.354 24.354 73.937 73.937h-244.079v34.446h244.08z"/></svg>
             <span class="link">
             Log In
@@ -113,5 +117,6 @@
                 Logs
             </span>
         </a>
+
     </div>
 </div>

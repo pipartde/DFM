@@ -24,6 +24,9 @@ div.nav{
     display: flex;
     flex-direction: column;
 }
+.box-nav .icon{
+    display: none;
+}
 .nav-link{
     background-color: #F7F7F7;
     padding: 18px 75px;
@@ -113,6 +116,11 @@ h3{
     width: 26px;
     height: 26px;
 }
+.menu{
+    fill: #168292;
+    width: 26px;
+    height: 26px;
+}
 .inlign-resultat{
     display: flex;
     justify-content: flex-start;
@@ -192,7 +200,10 @@ th{
     font-weight: bold;
     color: #4B4B4B;
 }
-@media screen and (max-width: 1024px) {
+.menu{
+    display: none;
+}
+@media screen and (max-width: 1040px) {
     .box{
         display: block;
         margin: 0;
@@ -275,5 +286,28 @@ th{
     thead{
         display: none;
     }
+}
 
+@media screen and (max-width: 1400px) {
+    .box{
+        display: block;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .box-nav {
+        display: block;
+        position: relative;
+        width: 100%;
+        text-align: left;
+    }
+    .box-nav .menu {
+        display: unset;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+    .box-nav.responsive a:not(.nav-link-stock):not(.menu){
+        display: none;
+    }
 }

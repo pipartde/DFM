@@ -70,3 +70,13 @@ resetSearch('#get_value_marque', '#select_value_marque',$selectValueMarque);
 resetSearch('#get_value_name', '#select_value_name',$selectValueName);
 resetSearch('#get_value_status', '#select_value_status',$selectValueStatus);
 resetSearch('#get_value_project', '#select_value_project',$selectValueProject);
+
+
+function myFunction() {
+    var x = document.getElementById("myBoxNav");
+    if (x.className === "box-nav") {
+        x.className += " responsive";
+    } else {
+        x.className = "box-nav";
+    }
+}
