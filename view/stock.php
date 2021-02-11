@@ -178,40 +178,40 @@
                 </thead>
                 <tbody id="checkNumber">
                 <tr class="tr">
-                    <td>0001</td>
-                    <td>100</td>
-                    <td>Ordinateur</td>
-                    <td>Portable</td>
-                    <td>Fujitsu</td>
-                    <td>HDC70 - Celsius Pro</td>
-                    <td>20-11-2020</td>
-                    <td>Disponible</td>
-                    <td>En stock</td>
-                    <td>Réparation</td>
+                    <td data-label="ID">0001</td>
+                    <td data-label="Nbr">100</td>
+                    <td data-label="Catégorie">Ordinateur</td>
+                    <td data-label="Type">Portable</td>
+                    <td data-label="Marque">Fujitsu</td>
+                    <td data-label="Nom">HDC70 - Celsius Pro</td>
+                    <td data-label="Garantie">20-11-2020</td>
+                    <td data-label="Statut">Disponible</td>
+                    <td data-label="Cible">En stock</td>
+                    <td data-label="Projet">Réparation</td>
                 </tr>
                 <tr class="tr">
-                    <td>0001</td>
-                    <td>100</td>
-                    <td>Ordinateur</td>
-                    <td>Portable</td>
-                    <td>Fujitsu</td>
-                    <td>HDC70 - Celsius Pro</td>
-                    <td>20-11-2020</td>
-                    <td>Disponible</td>
-                    <td>En stock</td>
-                    <td>Réparation</td>
+                    <td data-label="ID">0001</td>
+                    <td data-label="Nbr">100</td>
+                    <td data-label="Catégorie">Ordinateur</td>
+                    <td data-label="Type">Portable</td>
+                    <td data-label="Marque">Fujitsu</td>
+                    <td data-label="Nom">HDC70 - Celsius Pro</td>
+                    <td data-label="Garantie">20-11-2020</td>
+                    <td data-label="Statut">Disponible</td>
+                    <td data-label="Cible">En stock</td>
+                    <td data-label="Projet">Réparation</td>
                 </tr>
                 <tr class="tr">
-                    <td>0001</td>
-                    <td>100</td>
-                    <td>Ordinateur</td>
-                    <td>Portable</td>
-                    <td>Fujitsu</td>
-                    <td>HDC70 - Celsius Pro</td>
-                    <td>20-11-2020</td>
-                    <td>Disponible</td>
-                    <td>En stock</td>
-                    <td>Réparation</td>
+                    <td data-label="ID">0001</td>
+                    <td data-label="Nbr">100</td>
+                    <td data-label="Catégorie">Ordinateur</td>
+                    <td data-label="Type">Portable</td>
+                    <td data-label="Marque">Fujitsu</td>
+                    <td data-label="Nom">HDC70 - Celsius Pro</td>
+                    <td data-label="Garantie">20-11-2020</td>
+                    <td data-label="Statut">Disponible</td>
+                    <td data-label="Cible">En stock</td>
+                    <td data-label="Projet">Réparation</td>
                 </tr>
                 </tbody>
             </table>
