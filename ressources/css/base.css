@@ -24,9 +24,6 @@ div.nav{
     display: flex;
     flex-direction: column;
 }
-.box-nav .icon{
-    display: none;
-}
 .nav-link{
     background-color: #F7F7F7;
     padding: 18px 75px;
@@ -222,36 +219,13 @@ th{
         padding: 10px 10px 10px 10px;
         min-width: auto;
     }
-    .box-nav{
-        flex-flow: row wrap;
-        justify-content: center;
-    }
-
     .box-logo{
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
         margin: 10px 10px 10px 10px;
     }
-    .nav-link{
-        background-color: #F7F7F7;
-        padding: 10px 10px;
-        margin: 0 10px;
-        display: flex;
-        align-items: center;
-        border-radius: 5pt;
-        width: 100px;
-        justify-content: center
-    }
-    .svg-nav{
-        display: none;
-    }
-    .link{
-        padding-left: 0;
-        font-size: 15px;
-        font-weight: bold;
-        color: #4B4B4B;
-    }
+
     .form-tri{
         display: flex;
         flex-wrap: wrap;
@@ -294,6 +268,14 @@ th{
         margin: 0;
         padding: 0;
         width: 100%;
+    }
+    div.stock{
+        padding: 0 0 0 0;
+        width: 100%;
+        margin: 0 0;
+    }
+    .header{
+        padding: 30px;
     }
     .box-nav {
         display: block;

@@ -11,7 +11,7 @@
         </p>
     </div>
 
-    <div class="box-nav" id="myBoxNav">
+    <div class="box-nav responsive" id="myBoxNav">
         <a class="nav-link nav-link-stock" href="stock.php">
             <svg version="1.1" class="svg-nav svg-nav-stock" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
