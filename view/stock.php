@@ -45,33 +45,33 @@
 		S42.1,174.6,37,172.9z"/>
                     </g>
                 </svg>
-                <h3>
+                <h2>
                     Recherche
-                </h3>
+                </h2>
             </div>
 
             <form action="" method="get" class="form-tri view">
                 <select class="choix" id="get_value_category" name="category">
                     <option value="">Catégorie</option>
-                    <option value="Catégo1">Catégorie1</option>
+                    <option value="Catégo1">Catégorie 1</option>
                 </select>
-                <select id="get_value_type" name="type">
+                <select class="choix" id="get_value_type" name="type">
                     <option value="">Type</option>
-                    <option value="///">///</option>
+                    <option value="Type1">Type 1</option>
                 </select>
-                <select id="get_value_marque" name="marque">
+                <select class="choix" id="get_value_marque" name="marque">
                     <option value="">Marque</option>
-                    <option value="///">///</option>
+                    <option value="Marque1">Marque 1</option>
                 </select>
-                <select id="get_value_name" name="name">
+                <select class="choix" id="get_value_name" name="name">
                     <option value="">Nom</option>
-                    <option value="///">///</option>
+                    <option value="Nom1">Nom1</option>
                 </select>
-                <select id="get_value_status" name="status">
+                <select class="choix" id="get_value_status" name="status">
                     <option value="">Statut</option>
                     <option value="///">///</option>
                 </select>
-                <select id="get_value_project" name="project">
+                <select class="choix" id="get_value_project" name="project">
                     <option value="">Projet</option>
                     <option value="///">///</option>
                 </select>
@@ -154,9 +154,9 @@
                     </g>
                 </svg>
 
-                <h3>
+                <h2>
                     Résultats<span id="nbrResult" class="text-info"> | </span><span class="text-info"> résultat(s) trouvé(s)</span>
-                </h3>
+                </h2>
 
             </div>
 
@@ -177,7 +177,7 @@
                 </tr>
                 </thead>
                 <tbody id="checkNumber">
-                <tr>
+                <tr class="tr">
                     <td>0001</td>
                     <td>100</td>
                     <td>Ordinateur</td>
@@ -189,7 +189,19 @@
                     <td>En stock</td>
                     <td>Réparation</td>
                 </tr>
-                <tr>
+                <tr class="tr">
+                    <td>0001</td>
+                    <td>100</td>
+                    <td>Ordinateur</td>
+                    <td>Portable</td>
+                    <td>Fujitsu</td>
+                    <td>HDC70 - Celsius Pro</td>
+                    <td>20-11-2020</td>
+                    <td>Disponible</td>
+                    <td>En stock</td>
+                    <td>Réparation</td>
+                </tr>
+                <tr class="tr">
                     <td>0001</td>
                     <td>100</td>
                     <td>Ordinateur</td>

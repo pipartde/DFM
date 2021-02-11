@@ -57,11 +57,11 @@
 }
 
 .selectric-focus .selectric {
-  background: #1d2028;
+  background: #18ADBD;
 }
 
 .selectric-hover .selectric {
-  background: #282b36;
+  background: #18ADBD;
 }
 
 .selectric-hover .selectric .button {
@@ -150,7 +150,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background: #333745;
+  background: #178292;
   border: 1px solid #c4c4c4;
   z-index: -1;
   box-shadow: 0 0 10px -6px;
@@ -183,17 +183,17 @@
 }
 
 .selectric-items li.selected {
-  background: #5c5f6a;
+  background: #178292;
   color: #FFF;
 }
 
 .selectric-items li.highlighted {
-  background: #474b58;
+  background: #178292;
   color: #FFF;
 }
 
 .selectric-items li:hover {
-  background: #70737d;
+  background: #18ADBD;
   color: #FFF;
 }
 
