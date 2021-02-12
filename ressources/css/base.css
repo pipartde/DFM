@@ -25,25 +25,23 @@ div.nav{
     flex-direction: column;
 }
 .nav-link{
-    background-color: #F7F7F7;
+    background-color: #FFFFFF;
     padding: 18px 75px;
     margin: 5px 0;
     display: flex;
     align-items: center;
     border-radius: 5pt;
-}
-a.nav-link{
     text-decoration: none;
     outline: none;
 }
-a.nav-link:link{
+.nav-link:link{
     color: #3E3E3E;
 }
-a.nav-link:visited{
+.nav-link:visited{
     color: #3E3E3E;
 }
-a.nav-link:hover{
-    background-color: #FFFFFF;
+.nav-link:hover{
+    background-color: #F7F7F7;
 }
 .box-logo{
     display: flex;
@@ -154,17 +152,17 @@ h3{
     padding: 10px;
 }
 span.selected{
-    margin: 0;
+    cursor: pointer;
 }
 div.selectric{
     padding: 0 20px;
-    border-radius: 10pt;
+    border-radius: 10px;
     background-color: #168292;
 }
 
 div.selectric-wrapper{
     width: 150px;
-    padding: 0 10px;
+    margin: 0 10px 10px;
 }
 
 td{

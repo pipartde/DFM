@@ -155,7 +155,7 @@
                 </svg>
 
                 <h2>
-                    Résultats<span id="nbrResult" class="text-info"> | </span><span class="text-info"> résultat(s) trouvé(s)</span>
+                    Résultats |<span id="nbrResult" class="text-info"> </span><span class="text-info"> résultat(s) trouvé(s)</span>
                 </h2>
 
             </div>

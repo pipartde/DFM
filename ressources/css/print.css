@@ -1,5 +1,16 @@
+@page{
+    size: landscape;
+}
 body{
     background-color: transparent;
+}
+h2{
+    font-size: unset;
+    color: #8a8a8a;
+}
+#nbrResult{
+    font-weight: bold;
+    color: #CE3A13;
 }
 .nav{
     display: none;
@@ -16,4 +27,7 @@ body{
 .svg{
     display: none;
     /* ou alors je défini une taille ? */
+}
+td{
+    padding: 5px 10px;
 }

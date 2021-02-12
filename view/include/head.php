@@ -16,6 +16,7 @@
 
     <!-- Import CSS -->
     <link href="../ressources/css/base.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../ressources/css/print.css" rel="stylesheet" type="text/css" media="print">
     <link rel="stylesheet" href="../ressources/css/selectric.css">
 
 </head>

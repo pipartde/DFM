@@ -1,3 +1,6 @@
+//-------------------------------------------------------------------//
+// affichage du nombre de résultat trouvé (nombre de TR du tableau)
+//-------------------------------------------------------------------//
 function TotalResearch() {
     var tbody = document.getElementById('checkNumber');
     var trNbr = tbody.getElementsByTagName('tr');
@@ -7,19 +10,27 @@ function TotalResearch() {
 }
 TotalResearch();
 
-// ajout feuille de style print.css onClick()
 
+//-------------------------------------------------------//
+// ajout feuille de style print.css onClick()
+//-------------------------------------------------------//
+// function callPrintCss() {
+//     var print_css = document.createElement('link');
+//     print_css.href = "../ressources/css/print.css";
+//     print_css.rel = "stylesheet";
+//     print_css.type = "text/css";
+//     print_css.media = "print";
+//     document.getElementsByTagName("head")[0].appendChild(print_css);
+//     setTimeout(function () {window.print();},500) // 0.5 seconde
+// }
 function callPrintCss() {
-    var print_css = document.createElement('link');
-    print_css.href = "../ressources/css/print.css";
-    print_css.rel = "stylesheet";
-    print_css.type = "text/css";
-    print_css.media = "print";
-    document.getElementsByTagName("head")[0].appendChild(print_css);
-    setTimeout(function () {window.print();},500) // 0.5 seconde
+    window.print();
 }
 
 
+//-------------------------------------------------------//
+// mise en place des tags de recherches
+//-------------------------------------------------------//
 // Cache the target element
 var $selectValueCategory = $('#select_value_category').find('strong');
 var $selectValueType = $('#select_value_type').find('strong');
@@ -56,6 +67,9 @@ $('#get_value_project').selectric().on('change', function() {
 });
 
 
+//------------------------------------------------------------------//
+// reset des valeurs des champs de recherches (click sur les tags)
+//------------------------------------------------------------------//
 function resetSearch($getvalue,$selectvalue,$text) {
     $($getvalue).selectric();
 
@@ -72,6 +86,9 @@ resetSearch('#get_value_status', '#select_value_status',$selectValueStatus);
 resetSearch('#get_value_project', '#select_value_project',$selectValueProject);
 
 
+//-------------------------------------------------------//
+// btn du menu
+//-------------------------------------------------------//
 function myFunction() {
     var x = document.getElementById("myBoxNav");
     if (x.className === "box-nav") {
