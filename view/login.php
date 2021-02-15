@@ -1,5 +1,7 @@
 <?php
-
+if (!empty($_GET['message'])){
+    echo $_GET['message'];
+}
 ?>
 
 <!doctype html>
