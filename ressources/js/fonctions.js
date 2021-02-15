@@ -1,3 +1,4 @@
+
 //-------------------------------------------------------------------//
 // affichage du nombre de résultat trouvé (nombre de TR du tableau)
 //-------------------------------------------------------------------//
@@ -14,6 +15,9 @@ TotalResearch();
 //-------------------------------------------------------//
 // ajout feuille de style print.css onClick()
 //-------------------------------------------------------//
+function callPrintCss() {
+    window.print();
+}
 // function callPrintCss() {
 //     var print_css = document.createElement('link');
 //     print_css.href = "../ressources/css/print.css";
@@ -23,9 +27,6 @@ TotalResearch();
 //     document.getElementsByTagName("head")[0].appendChild(print_css);
 //     setTimeout(function () {window.print();},500) // 0.5 seconde
 // }
-function callPrintCss() {
-    window.print();
-}
 
 
 //-------------------------------------------------------//
@@ -89,7 +90,7 @@ resetSearch('#get_value_project', '#select_value_project',$selectValueProject);
 //-------------------------------------------------------//
 // btn du menu
 //-------------------------------------------------------//
-function myFunction() {
+function btn_menu() {
     var x = document.getElementById("myBoxNav");
     if (x.className === "box-nav") {
         x.className += " responsive";

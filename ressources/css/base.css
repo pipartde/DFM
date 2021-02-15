@@ -78,7 +78,6 @@ div.result{
 div.result table{
     width: 100%;
 }
-
 span.text-info {
     font-size: 15px;
     font-weight: normal;
@@ -88,7 +87,6 @@ span.text-info {
     font-weight: bold;
     font-size: 50px;
     padding-bottom: 10px;
-
 }
 h1{
     font-size: 2em;
@@ -132,7 +130,6 @@ h3{
 .svg-print{
     width: 15px;
 }
-
 .inlign-searchBar{
     display: flex;
     justify-content: flex-start;
@@ -144,7 +141,6 @@ h3{
     flex-wrap: wrap;
     justify-content: flex-start;
 }
-
 .inline-selector{
     display: flex;
     justify-content: flex-start;
@@ -159,12 +155,10 @@ div.selectric{
     border-radius: 10px;
     background-color: #168292;
 }
-
 div.selectric-wrapper{
     width: 150px;
     margin: 0 10px 10px;
 }
-
 td{
     font-size: 15px;
     font-weight: normal;
@@ -188,7 +182,6 @@ th{
 .tr:nth-child(odd) {
     background: #F7F7F7;
 }
-
 .link{
     padding-left: 17px;
     font-size: 15px;
@@ -223,7 +216,6 @@ th{
         align-items: center;
         margin: 10px 10px 10px 10px;
     }
-
     .form-tri{
         display: flex;
         flex-wrap: wrap;
@@ -259,7 +251,6 @@ th{
         display: none;
     }
 }
-
 @media screen and (max-width: 1400px) {
     .box{
         display: block;

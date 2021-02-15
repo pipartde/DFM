@@ -1,9 +1,9 @@
 <?php
 
 include('fonction.php');
-include('model/read.php');
+include('../model/admin/read.php');
 
-var_dump($_POST);
+
 
 $error = null;
 
@@ -12,7 +12,6 @@ if (empty($_POST["email"]) or empty($_POST["password"])){
 }
 
 if (!verifEmail($_POST['email'])){
-
     $GLOBALS['error'] = "8";
 }
 

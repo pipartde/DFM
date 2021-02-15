@@ -1,10 +1,9 @@
 <?php
 
-include('connexion.php');
 
 function RecupInfosAdmin($email){
     include("connexion.php");
-    $query = "SELECT password, login FROM admin WHERE email = :email";
+    $query = "SELECT password, trigramme, email FROM admin WHERE email = :email";
     $query_params = array( ':email' => $email );
     try{
         $stmt = $db->prepare($query);
@@ -36,7 +35,7 @@ function RecupEmails(){
 function recupTousAdmin(){
 
     global $db;
-    include("connexion.php");
+    include('connexion.php');
 
     $query = "SELECT email, password, trigramme FROM admin";
     $query_params = array();

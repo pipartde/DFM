@@ -197,3 +197,15 @@ function verifNom($aVerifier)
     }
 }
 
+function creationTrigramme($email){
+    $nomprenom = explode("@", $email);
+    $basis = explode(".", $nomprenom[0]);
+    return ($basis[0][0].$basis[1][0].$basis[1][-1]);
+}
+
+function splitName($email){
+    $nomprenom = explode("@", $email);
+    $basis = explode(".", $nomprenom[0]);
+    return array($basis[0], $basis[1]);
+}
+
