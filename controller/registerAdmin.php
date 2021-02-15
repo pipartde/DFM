@@ -40,8 +40,8 @@ if ($error != null){
     $prenom = splitName($_POST['email'])[0];
     $lastID = insertAdmin($nom,$prenom,$_POST['email'],$_POST['mdp'],$trigramme);
     $_SESSION['pk']=$lastID;
-    var_dump($_POST);
-    /*unset($_POST['password']);
+    echo $trigramme;
+/*    unset($_POST['password']);
     header('Location: ../view/pageAdmin.php');*/
 
 }

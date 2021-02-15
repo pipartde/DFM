@@ -37,7 +37,26 @@ function recupTousAdmin(){
     global $db;
     include('connexion.php');
 
-    $query = "SELECT email, password, trigramme FROM admin";
+    $query = "SELECT nom, prenom, email, password, trigramme FROM admin";
+    $query_params = array();
+
+    try{
+        $stmt = $db->prepare($query);
+        $result = $stmt->execute($query_params);
+    }
+    catch(PDOException $ex){
+        die("Failed query : " . $ex->getMessage());
+    }
+
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $result;
+}
+
+function recupTrigramme(){
+    global $db;
+    include('connexion.php');
+
+    $query = "SELECT trigramme FROM admin";
     $query_params = array();
 
     try{

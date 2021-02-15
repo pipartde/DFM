@@ -197,11 +197,11 @@ function verifNom($aVerifier)
     }
 }
 
-function creationTrigramme($email){
+/*function creationTrigramme($email){
     $nomprenom = explode("@", $email);
     $basis = explode(".", $nomprenom[0]);
     return ($basis[0][0].$basis[1][0].$basis[1][-1]);
-}
+}*/
 
 function splitName($email){
     $nomprenom = explode("@", $email);
@@ -209,3 +209,27 @@ function splitName($email){
     return array($basis[0], $basis[1]);
 }
 
+
+function creationTrigramme($email){
+    $nomprenom = explode("@", $email);
+    $basis = explode(".", $nomprenom[0]);
+    $triG = $basis[0][0].$basis[1][0].$basis[1][-1];
+    $listTriG = recupTrigramme();
+    $basis[0] = substr($basis[0],1);
+    $basis[1] = substr($basis[1],1,-1);
+    $flag = true;                   // me permet de passer du nom au prenom
+    var_dump($listTriG);
+    while (in_array($triG,$listTriG)){
+        if ($flag){
+            echo ('essai');
+            $triG .= $basis[0][-1];
+            $basis[0] = substr($basis[0],0,-1);
+            $flag = false;
+        } else {
+            $triG .= $basis[1][-1];
+            $basis[1] = substr($basis[1],0,-1);
+            $flag = true;
+        }
+    }
+    return $triG;
+}
