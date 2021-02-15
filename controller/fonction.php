@@ -219,9 +219,16 @@ function creationTrigramme($email){
     $basis[1] = substr($basis[1],1,-1);
     $flag = true;                   // me permet de passer du nom au prenom
     var_dump($listTriG);
-    while (in_array($triG,$listTriG)){
+    $listTrigramme = array();
+    foreach ($listTriG as $key => $trigra){
+        foreach ($trigra as $trigramme)
+        {
+            array_push($listTrigramme,$trigramme);
+        }
+    }
+    var_dump($listTrigramme);
+    while (in_array($triG,$listTrigramme)){
         if ($flag){
-            echo ('essai');
             $triG .= $basis[0][-1];
             $basis[0] = substr($basis[0],0,-1);
             $flag = false;

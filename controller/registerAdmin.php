@@ -31,7 +31,7 @@ if (empty($_POST["email"]) or empty($_POST["password"]) ) {
 }
 var_dump($_POST);
 if ($error != null){
-    errorMessage("../view/login.php",$error);
+    errorMessage("../view/pageAdmin.php",$error);
 } else {            // si pas d'erreur =>
     // todo : finaliser l'inscription nouvel admin
     $_POST["mdp"] = password_hash($_POST["password"], PASSWORD_BCRYPT);
