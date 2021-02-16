@@ -18,9 +18,9 @@ if (!empty($_GET['message'])){
 <body>
 
 <form method="post" action="../controller/login.php">
-    <label for="email">Email</label>
-    <input type="text" name="email" id="email">
-    <label for="password">Password</label>
+    <label for="email">Email ou trigramme</label><br>
+    <input type="text" name="email" id="email"><br><br>
+    <label for="password">Password</label><br>
     <input type="password" name="password" id="password">
     <input type="submit">
 </form>

@@ -18,7 +18,10 @@ if ($_SESSION['superadmin']){
 
 ?>
 
+<html>
+<?php include('include/head.php') ?>
 
+<body>
 <table>
     <thead>
     <tr>
@@ -27,6 +30,7 @@ if ($_SESSION['superadmin']){
         <th>email</th>
         <th>trigramme</th>
         <th>password</th>
+        <th class="superadmin">action</th>
     </tr>
     </thead>
     <tbody>
@@ -40,11 +44,12 @@ if ($_SESSION['superadmin']){
         <td><?= htmlspecialchars($admin['email']) ?></td>
         <td><?= htmlspecialchars($admin['trigramme']) ?></td>
         <td><?= htmlspecialchars($admin['password']) ?></td>
+        <td class="superadmin">DEL MOD</td>
     </tr>
     <?php } ?>
     </tbody>
 </table>
-
+<div class="superadmin">
 <h3>
     Inscription d'un nouvel admin
 </h3>
@@ -57,5 +62,13 @@ if ($_SESSION['superadmin']){
     <input type="checkbox" name="superadmin" id="superadmin">
     <input type="submit">
 </form>
-
+</div>
 <h3><a href="../controller/logout.php">deconnexion</a></h3>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../ressources/js/test.js"></script>
+</body>
+
+
+</html>

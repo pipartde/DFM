@@ -44,7 +44,7 @@ function errorMessage($location,$error){
         case 27:$message="Votre compte n'a pas été activé.";break;
         case 28:$message="Capcha non conforme !";break;
         case 29:$message="Modification annulée.";break;
-        case 30:$message="Le login n'existe pas.";break;
+        case 30:$message="cet email ou trigramme n'existe pas.";break;
         case 31:$message="Mauvais mot de passe!";break;
 
         default:$message="erreur inconnue";break;
