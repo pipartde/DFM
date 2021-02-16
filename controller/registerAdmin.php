@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 include('fonction.php');
 include('../model/admin/read.php');
 include('../model/admin/insert.php');
@@ -11,6 +12,7 @@ checkTrimArray($_POST);
 
 
 $error = null;
+$superadmin = false;
 
 if (empty($_POST["email"]) or empty($_POST["password"]) ) {
     $GLOBALS['error'] = "1";
@@ -29,7 +31,11 @@ if (empty($_POST["email"]) or empty($_POST["password"]) ) {
         }
     }
 }
-var_dump($_POST);
+
+if (!empty($_POST['superadmin'])){
+    $superadmin = true;
+}
+
 if ($error != null){
     errorMessage("../view/pageAdmin.php",$error);
 } else {            // si pas d'erreur =>
@@ -38,10 +44,12 @@ if ($error != null){
     $trigramme = creationTrigramme($_POST['email']);
     $nom = splitName($_POST['email'])[1];
     $prenom = splitName($_POST['email'])[0];
-    $lastID = insertAdmin($nom,$prenom,$_POST['email'],$_POST['mdp'],$trigramme);
+
+    $lastID = insertAdmin($nom,$prenom,$_POST['email'],$_POST['mdp'],$trigramme);   // création de l'admin
+    insertAcces($lastID,$superadmin);                                               // création de l'accès pour cet admin
+
     $_SESSION['pk']=$lastID;
-    echo $trigramme;
-/*    unset($_POST['password']);
-    header('Location: ../view/pageAdmin.php');*/
+    unset($_POST['password']);
+    header('Location: ../view/pageAdmin.php');
 
 }

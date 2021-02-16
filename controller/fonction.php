@@ -12,23 +12,6 @@ function checkTrimArray($post){
     }
 }
 
-function checkPost($login, $password, $passDB, $loginDB){
-    if(isset($login) AND isset($password)){
-        if(empty($login)){
-            return 'Veuillez indiquer votre login svp !';
-        }elseif(empty($password)){
-            return 'Veuillez indiquer votre mot de passe svp !';
-        }elseif($login !== $loginDB){
-            return 'Votre login est faux !';
-        }elseif(!password_verify($password, $passDB)){
-            return 'Erreur Password';
-        }else{
-            return 'ok';
-        }
-    }else{
-        return 'login ou mdp pas present';
-    }
-}
 
 function errorMessage($location,$error){
     switch ($error){
@@ -68,8 +51,6 @@ function errorMessage($location,$error){
     }
     header("Location: ".$location."?message=".$message);
 }
-
-
 
 
 function verifMdp($aVerifier){
@@ -197,13 +178,8 @@ function verifNom($aVerifier)
     }
 }
 
-/*function creationTrigramme($email){
-    $nomprenom = explode("@", $email);
-    $basis = explode(".", $nomprenom[0]);
-    return ($basis[0][0].$basis[1][0].$basis[1][-1]);
-}*/
 
-function splitName($email){
+function splitName($email){                                  // récupération d'une liste contenant prénom puis nom à partir de l'email
     $nomprenom = explode("@", $email);
     $basis = explode(".", $nomprenom[0]);
     return array($basis[0], $basis[1]);
@@ -211,31 +187,29 @@ function splitName($email){
 
 
 function creationTrigramme($email){
-    $nomprenom = explode("@", $email);
-    $basis = explode(".", $nomprenom[0]);
-    $triG = $basis[0][0].$basis[1][0].$basis[1][-1];
-    $listTriG = recupTrigramme();
-    $basis[0] = substr($basis[0],1);
-    $basis[1] = substr($basis[1],1,-1);
-    $flag = true;                   // me permet de passer du nom au prenom
-    var_dump($listTriG);
+    $nomprenom = explode("@", $email);              // je découpe l'email pour ne récupérer que la partie avant le @
+    $basis = explode(".", $nomprenom[0]);           // je découpe la partie nom/prénom/... pour en faire une liste
+    $triG = $basis[0][0].$basis[1][0].$basis[1][-1];         // je crée le trigramme de base (1ère prénom,1ère nom,dernière nom)
+    $basis[0] = substr($basis[0],1);                  // je retire du prénom 1ère lettre
+    $basis[1] = substr($basis[1],1,-1);        // je retire du nom la 1ère et dernière lettre
+    $listTriG = recupTrigramme();                            // je récupère de la bdd tous les trigramme existant
     $listTrigramme = array();
-    foreach ($listTriG as $key => $trigra){
+    foreach ($listTriG as $key => $trigra){                  // je simplifie la liste
         foreach ($trigra as $trigramme)
         {
             array_push($listTrigramme,$trigramme);
         }
     }
-    var_dump($listTrigramme);
-    while (in_array($triG,$listTrigramme)){
-        if ($flag){
-            $triG .= $basis[0][-1];
-            $basis[0] = substr($basis[0],0,-1);
-            $flag = false;
-        } else {
-            $triG .= $basis[1][-1];
-            $basis[1] = substr($basis[1],0,-1);
-            $flag = true;
+    $flag = true;                                              // le flag me permettra de passer du nom au prénom dans la boucle
+    while (in_array($triG,$listTrigramme)){                    // tant que le trigramme existe dans la liste de la bdd ...
+        if ($flag){                                            // si le flag est True
+            $triG .= $basis[0][-1];                            // je lui ajoute la dernière lettre du prénom
+            $basis[0] = substr($basis[0],0,-1);  // je retire du prénom la dernière lettre
+            $flag = false;                                     // je passe mon flag à false et retour au début de boucle pour vérification
+        } else {                                               // si flag est false
+            $triG .= $basis[1][-1];                            // j'ajoute la dernière lettre du nom
+            $basis[1] = substr($basis[1],0,-1);  // je retire du nom la dernière lettre
+            $flag = true;                                      // je passe mon flag à true et retour au début de boucle pour vérification
         }
     }
     return $triG;
