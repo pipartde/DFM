@@ -15,6 +15,21 @@ function RecupInfosAdmin($email){
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $result[0];
 }
+function recupInfoAdminTrig($trigramme){
+    include("connexion.php");
+    $query = "SELECT pk_adm, password, trigramme, email FROM admin WHERE trigramme = :trigramme";
+    $query_params = array( ':trigramme' => $trigramme );
+    try{
+        $stmt = $db->prepare($query);
+        $result = $stmt->execute($query_params);
+    }
+    catch(PDOException $ex){
+        die("Failed query : " . $ex->getMessage());
+    }
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $result[0];
+}
+
 
 
 function RecupEmails(){

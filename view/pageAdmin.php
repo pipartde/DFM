@@ -12,7 +12,7 @@ if (!empty($_GET['message'])){
     echo $_GET['message'];
 }
 
-if (isSuperAdmin($_SESSION['pk'])){
+if ($_SESSION['superadmin']){
     echo "vous êtes un Super Admin";
 }
 

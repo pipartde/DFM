@@ -19,7 +19,7 @@ if (!empty($_GET['message'])){
 
 <form method="post" action="../controller/login.php">
     <label for="email">Email</label>
-    <input type="email" name="email" id="email">
+    <input type="text" name="email" id="email">
     <label for="password">Password</label>
     <input type="password" name="password" id="password">
     <input type="submit">

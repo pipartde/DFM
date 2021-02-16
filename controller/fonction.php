@@ -217,5 +217,4 @@ function creationTrigramme($email){
 
 function isSuperAdmin($pkAdmin){
     return (recupAccess($pkAdmin)['superadmin']==1);
-
 }
