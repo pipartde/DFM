@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+if(empty($_SESSION['pk'])){
+    header('Location: login.php');
+}
 ?>
 
 

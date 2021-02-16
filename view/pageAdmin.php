@@ -1,8 +1,19 @@
 <?php
 session_start();
+
 include('../model/admin/read.php');
+include('../controller/fonction.php');
+
+if(empty($_SESSION['pk'])){
+    header('Location: login.php');
+}
+
 if (!empty($_GET['message'])){
     echo $_GET['message'];
+}
+
+if (isSuperAdmin($_SESSION['pk'])){
+    echo "vous êtes un Super Admin";
 }
 
 ?>
@@ -46,3 +57,5 @@ if (!empty($_GET['message'])){
     <input type="checkbox" name="superadmin" id="superadmin">
     <input type="submit">
 </form>
+
+<h3><a href="../controller/logout.php">deconnexion</a></h3>

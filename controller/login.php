@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include('fonction.php');
 include('../model/admin/read.php');
 
@@ -57,7 +57,7 @@ if ($error != null){
     errorMessage("../view/login.php",$error);
 } else {
     unset($_POST["password"]);
-
+    $_SESSION['pk']=$infoAdmin['pk_adm'];
     header('Location: ../view/pageAdmin.php');
 }
 
