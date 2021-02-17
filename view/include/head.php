@@ -1,6 +1,7 @@
 <?php
 ?>
-
+<!doctype html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -20,3 +21,4 @@
     <link rel="stylesheet" href="../ressources/css/selectric.css">
 
 </head>
+<body>

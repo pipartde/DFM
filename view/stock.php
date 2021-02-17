@@ -5,21 +5,18 @@ session_start();
 if(empty($_SESSION['pk'])){
     header('Location: login.php');
 }
+
+include('include/head.php') ;
+
 ?>
 
 
-<!doctype html>
-<html lang="fr">
-
-<?php include('include/head.php') ?>
-
-<body>
 
 <div class="box">
 
     <?php include('include/nav.php'); ?>
 
-    <div class="stock">
+    <div class="content stock">
 
         <div class="header">
             <h1 class="text-header">Gestion de stock</h1>

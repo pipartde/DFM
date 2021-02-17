@@ -4,20 +4,18 @@ session_start();
 if (!empty($_GET['message'])){
     echo $_GET['message'];
 }
+
+include('include/head.php');
+
 ?>
 
-<!doctype html>
-<html lang="fr">
 
-<?php include('include/head.php') ?>
-
-<body>
 
 <div class="box">
 
     <?php include('include/nav.php'); ?>
 
-    <div class="login">
+    <div class="content login">
 
         <div class="header">
             <h1 class="text-header">Connexion</h1>
