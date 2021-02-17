@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+
 if(empty($_SESSION['pk'])){
     header('Location: login.php');
 }
@@ -229,7 +230,7 @@ if(empty($_SESSION['pk'])){
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../ressources/js/jquery.selectric.js"></script>
-<script src="../ressources/js/fonctions.js"></script>
+<script src="../ressources/js/stock.js"></script>
 
 </body>
 </html>
