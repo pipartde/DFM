@@ -41,6 +41,7 @@ include('include/head.php');
                     <th>email</th>
                     <th>trigramme</th>
                     <th>password</th>
+                    <th>Super Admin</th>
                     <th class="superadmin" colspan="2">action</th>
                 </tr>
                 </thead>
@@ -51,17 +52,18 @@ include('include/head.php');
                     $pk = $admin['pk_adm'];
                     ?>
                     <tr>
-                        <form method="post" action="">
-                            <td><input class="mod<?= $admin['pk_adm'] ?>" type="text" name="nom" disabled
-                                       value="<?= htmlspecialchars($admin['nom']) ?>"></td>
-                            <td><input class="mod<?= $admin['pk_adm'] ?>" type="text" name="prenom" disabled
-                                       value="<?= htmlspecialchars($admin['prenom']) ?>"></td>
-                            <td><input class="mod<?= $admin['pk_adm'] ?>" type="email" name="email" disabled
-                                       value="<?= htmlspecialchars($admin['email']) ?>"></td>
-                            <td><input type="text" name="trigramme" disabled
-                                       value="<?= htmlspecialchars($admin['trigramme']) ?>"></td>
-                            <td><input class="mod<?= $admin['pk_adm'] ?>" type="password" name="password" disabled
-                                       value="<?= htmlspecialchars($admin['password']) ?>"></td>
+                        <form method="post" action="../controller/modifyAdmin.php" class="modifyAdmin" data-form="register">
+                            <td><div class="field"><input class="mod<?= $admin['pk_adm'] ?> " type="text" name="nom" disabled
+                                                                value="<?= htmlspecialchars($admin['nom']) ?>"></div></td>
+                            <td><div class="field"><input class="mod<?= $admin['pk_adm'] ?>" type="text" name="prenom" disabled
+                                                          value="<?= htmlspecialchars($admin['prenom']) ?>"></div></td>
+                            <td><div class="field"><input class="mod<?= $admin['pk_adm'] ?>" type="email" name="email" disabled
+                                                          value="<?= htmlspecialchars($admin['email']) ?>"></div></td>
+                            <td><div class="field"><input type="text" name="trigramme" disabled
+                                                          value="<?= htmlspecialchars($admin['trigramme']) ?>"></div></td>
+                            <td><div class="field"><input class="mod<?= $admin['pk_adm'] ?> vidange" type="password" name="password" disabled
+                                                          value="<?= htmlspecialchars($admin['password']) ?>"></div></td>
+                            <td><div class="field"><input class="mod<?= $admin['pk_adm'] ?>" disabled type="checkbox" name="superadmin" <?php if(isSuperAdmin($pk)){echo "checked";}; ?> </div></td>
                             <td class="superadmin offModify">
                                 <svg onclick="toModify(<?= $pk ?>)" class="svg-admin" height="401pt"
                                      viewBox="0 -1 401.52289 401" width="401pt" xmlns="http://www.w3.org/2000/svg">
@@ -70,6 +72,7 @@ include('include/head.php');
                                 </svg>
                             </td>
                             <td class="superadmin onModify hide">
+                                <div class="field"><input type="hidden" name="pkadmin" value="<?= $pk ?>"></div>
                                 <svg onclick="forModify(<?= $pk ?>)" class="svg-admin" height="401pt"
                                      viewBox="0 -1 401.52289 401" width="401pt" xmlns="http://www.w3.org/2000/svg">
                                     <path d="m370.589844 250.972656c-5.523438 0-10 4.476563-10 10v88.789063c-.019532 16.5625-13.4375 29.984375-30 30h-280.589844c-16.5625-.015625-29.980469-13.4375-30-30v-260.589844c.019531-16.558594 13.4375-29.980469 30-30h88.789062c5.523438 0 10-4.476563 10-10 0-5.519531-4.476562-10-10-10h-88.789062c-27.601562.03125-49.96875 22.398437-50 50v260.59375c.03125 27.601563 22.398438 49.96875 50 50h280.589844c27.601562-.03125 49.96875-22.398437 50-50v-88.792969c0-5.523437-4.476563-10-10-10zm0 0"/>
@@ -98,10 +101,10 @@ include('include/head.php');
                 Inscription d'un nouvel admin
             </h3>
             <form action="../controller/registerAdmin.php" method="post">
-                <label for="email">Email : </label>
-                <input type="email" name="email" id="email">
-                <label for="password">Password : </label>
-                <input type="password" name="password" id="password">
+                <label for="email2">Email : </label>
+                <input type="email" name="email2" id="email2">
+                <label for="password2">Password : </label>
+                <input type="password" name="password2" id="password2">
                 <label>Super Admin ? : </label>
                 <input type="checkbox" name="superadmin" id="superadmin">
                 <input type="submit">
@@ -119,7 +122,7 @@ include('include/head.php');
 <!-- si la personne qui se log n'est pas un superAdmin, on hide les partie sensible -->
 <?php if (!$_SESSION['superadmin']) {
     ?>
-    <script>testing();</script>
+    <script>toggleShowAdmin();</script>
     <?php
 } ?>
 

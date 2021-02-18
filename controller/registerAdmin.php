@@ -14,18 +14,18 @@ checkTrimArray($_POST);
 $error = null;
 $superadmin = false;
 
-if (empty($_POST["email"]) or empty($_POST["password"]) ) {
+if (empty($_POST["email2"]) or empty($_POST["password2"]) ) {
     $GLOBALS['error'] = "1";
-} elseif (!verifEmail($_POST["email"])){    // contrôle si format email est ok
+} elseif (!verifEmail($_POST["email2"])){    // contrôle si format email est ok
     $GLOBALS['error'] = "8";
-} elseif (!verifMdp($_POST['password'])){
+} elseif (!verifMdp($_POST['password2'])){
     $GLOBALS['error'] = "";                 //todo : verifier le type erreur mdp
 } else {
     // contrôle si email déjà existant et donc admin
     $listeAdmin = recupTousAdmin();
     if($listeAdmin){
         foreach($listeAdmin as $admin){
-            if ($admin['email'] == $_POST['email']){
+            if ($admin['email'] == $_POST['email2']){
                 $GLOBALS['error'] = "10";
             }
         }
@@ -40,16 +40,16 @@ if ($error != null){
     errorMessage("../view/pageAdmin.php",$error);
 } else {            // si pas d'erreur =>
     // todo : finaliser l'inscription nouvel admin
-    $_POST["mdp"] = password_hash($_POST["password"], PASSWORD_BCRYPT);
-    $trigramme = creationTrigramme($_POST['email']);
-    $nom = splitName($_POST['email'])[1];
-    $prenom = splitName($_POST['email'])[0];
+    $_POST["mdp"] = password_hash($_POST["password2"], PASSWORD_BCRYPT);
+    $trigramme = creationTrigramme($_POST['email2']);
+    $nom = splitName($_POST['email2'])[1];
+    $prenom = splitName($_POST['email2'])[0];
 
-    $lastID = insertAdmin($nom,$prenom,$_POST['email'],$_POST['mdp'],$trigramme);   // création de l'admin
+    $lastID = insertAdmin($nom,$prenom,$_POST['email2'],$_POST['mdp'],$trigramme);   // création de l'admin
     insertAcces($lastID,$superadmin);                                               // création de l'accès pour cet admin
 
-    $_SESSION['pk']=$lastID;
-    unset($_POST['password']);
+
+    unset($_POST['password2']);
     header('Location: ../view/pageAdmin.php');
 
 }

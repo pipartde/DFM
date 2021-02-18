@@ -44,6 +44,21 @@ function recupInfoAdminPK($pk){
     return $result[0];
 }
 
+function recupPaswword($pk){
+    include("connexion.php");
+    $query = "SELECT password FROM admin WHERE pk_adm = :pk";
+    $query_params = array( ':pk' => $pk );
+    try{
+        $stmt = $db->prepare($query);
+        $result = $stmt->execute($query_params);
+    }
+    catch(PDOException $ex){
+        die("Failed query : " . $ex->getMessage());
+    }
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $result[0];
+}
+
 
 function RecupEmails(){
     include("connexion.php");
