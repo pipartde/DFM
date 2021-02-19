@@ -3,7 +3,7 @@
 function updateAdmin($nom, $prenom, $email, $mdp, $trigramme, $pk, $superadmin)
 {
     global $db;
-    include('connexion.php');
+    include('../model/connexion.php');
     $query = "UPDATE admin SET nom = :nom, prenom = :prenom, email = :email, password = :mdp, trigramme = :trigramme where pk_adm = :pk_adm";
     $query_params = array(':nom' => $nom,
         ':prenom' => $prenom,

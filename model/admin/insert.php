@@ -4,7 +4,7 @@
 function insertAdmin($nom, $prenom, $email, $mdp,$trigramme)
 {
     global $db;
-    include("connexion.php");
+    include("../model/connexion.php");
 
     $query = "INSERT INTO admin (nom, prenom, email, password, trigramme) VALUES (:nom, :prenom, :email, :mdp, :trigramme)";     // Nom de colonne - Valeur des champs de la colonne.
     $query_params = array(':nom' => $nom,
@@ -24,7 +24,7 @@ function insertAdmin($nom, $prenom, $email, $mdp,$trigramme)
 
 function insertAcces($pkAdmin, $superadmin){
     global $db;
-    include("connexion.php");
+    include("../model/connexion.php");
 
     if ($superadmin){
         $query = "INSERT INTO access (fk_adm, superadmin) VALUES (:fk_admin, '1')";

@@ -1,14 +1,8 @@
 <?php
-function deleteAdmin($pk){
-
-    global $db;
+function recupCategory(){
     include("../model/connexion.php");
-
-    $query = "  DELETE
-                FROM admin
-                WHERE pk_adm = ?";
-    $query_params = array($pk);
-
+    $query = "SELECT pk_cat, nom FROM category";
+    $query_params = array();
     try{
         $stmt = $db->prepare($query);
         $result = $stmt->execute($query_params);
@@ -16,19 +10,15 @@ function deleteAdmin($pk){
     catch(PDOException $ex){
         die("Failed query : " . $ex->getMessage());
     }
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $result;
 }
 
-function deleteAccess($pkAdmin){
-
-    global $db;
+function recupType($category){
     include("../model/connexion.php");
 
-    $query = "  DELETE
-                FROM access
-                WHERE fk_adm = ?";
-    $query_params = array($pkAdmin);
-
-
+    $query = "SELECT pk_typ, nom FROM type where fk_cat = :category";
+    $query_params = array(':category' => $category);
     try{
         $stmt = $db->prepare($query);
         $result = $stmt->execute($query_params);
@@ -36,4 +26,6 @@ function deleteAccess($pkAdmin){
     catch(PDOException $ex){
         die("Failed query : " . $ex->getMessage());
     }
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $result;
 }

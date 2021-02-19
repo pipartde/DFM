@@ -1,16 +1,4 @@
 
-//-------------------------------------------------------------------//
-// affichage du nombre de résultat trouvé (nombre de TR du tableau)
-//-------------------------------------------------------------------//
-function TotalResearch() {
-    var tbody = document.getElementById('checkNumber');
-    var trNbr = tbody.getElementsByTagName('tr');
-    var num = trNbr.length;
-    var result = document.getElementById('nbrResult');
-    result.innerHTML += num;
-}
-TotalResearch();
-
 
 //-------------------------------------------------------//
 // ajout feuille de style print.css onClick()
@@ -68,6 +56,19 @@ $('#get_value_project').selectric().on('change', function() {
 });
 
 
+//-------------------------------------------------------//
+// selection des item => newstock
+//-------------------------------------------------------//
+
+function forcategory(value) {
+    if (value !== ""){
+        $('#toshow').removeClass("hide");
+    }
+}
+
+
+
+
 //------------------------------------------------------------------//
 // reset des valeurs des champs de recherches (click sur les tags)
 //------------------------------------------------------------------//
@@ -98,3 +99,16 @@ function btn_menu() {
         x.className = "box-nav";
     }
 }
+
+
+//-------------------------------------------------------------------//
+// affichage du nombre de résultat trouvé (nombre de TR du tableau)
+//-------------------------------------------------------------------//
+function TotalResearch() {
+    var tbody = document.getElementById('checkNumber');
+    var trNbr = tbody.getElementsByTagName('tr');
+    var num = trNbr.length;
+    var result = document.getElementById('nbrResult');
+    result.innerHTML += num;
+}
+TotalResearch();

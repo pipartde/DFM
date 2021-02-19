@@ -195,6 +195,13 @@ th{
 .hide{
     display: none;
 }
+
+.selectric-items{
+    border-radius: 0 0 10pt 10pt;
+}
+.selectric-scroll{
+    border-radius: 0 0 10pt 10pt;
+}
 .show{
     display: unset;
 }

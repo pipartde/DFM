@@ -2,7 +2,7 @@
 
 
 function RecupInfosAdmin($email){
-    include("connexion.php");
+    include("../model/connexion.php");
     $query = "SELECT pk_adm, password, trigramme, email FROM admin WHERE email = :email";
     $query_params = array( ':email' => $email );
     try{
@@ -16,7 +16,7 @@ function RecupInfosAdmin($email){
     return $result[0];
 }
 function recupInfoAdminTrig($trigramme){
-    include("connexion.php");
+    include("../model/connexion.php");
     $query = "SELECT pk_adm, password, trigramme, email FROM admin WHERE trigramme = :trigramme";
     $query_params = array( ':trigramme' => $trigramme );
     try{
@@ -30,7 +30,7 @@ function recupInfoAdminTrig($trigramme){
     return $result[0];
 }
 function recupInfoAdminPK($pk){
-    include("connexion.php");
+    include("../model/connexion.php");
     $query = "SELECT pk_adm, nom, prenom, password, trigramme, email FROM admin WHERE pk_adm = :pk";
     $query_params = array( ':pk' => $pk );
     try{
@@ -45,7 +45,7 @@ function recupInfoAdminPK($pk){
 }
 
 function recupPaswword($pk){
-    include("connexion.php");
+    include("../model/connexion.php");
     $query = "SELECT password FROM admin WHERE pk_adm = :pk";
     $query_params = array( ':pk' => $pk );
     try{
@@ -61,7 +61,7 @@ function recupPaswword($pk){
 
 
 function RecupEmails(){
-    include("connexion.php");
+    include("../model/connexion.php");
     $query = "SELECT email FROM admin";
     $query_params = array();
     try{
@@ -78,7 +78,7 @@ function RecupEmails(){
 function recupTousAdmin(){
 
     global $db;
-    include('connexion.php');
+    include('../model/connexion.php');
 
     $query = "SELECT pk_adm, nom, prenom, email, password, trigramme FROM admin";
     $query_params = array();
@@ -97,7 +97,7 @@ function recupTousAdmin(){
 
 function recupTrigramme(){
     global $db;
-    include('connexion.php');
+    include('../model/connexion.php');
 
     $query = "SELECT trigramme FROM admin";
     $query_params = array();
@@ -117,7 +117,7 @@ function recupTrigramme(){
 function recupAccess($pkadmin){
 
     global $db;
-    include('connexion.php');
+    include('../model/connexion.php');
 
     $query = "SELECT * FROM access WHERE fk_adm = :fk_admin";
     $query_params = array( ':fk_admin' => $pkadmin);
