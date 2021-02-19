@@ -1,4 +1,3 @@
-//-------------------------------------------------------//
 // affichage selon accès autorisé
 //-------------------------------------------------------//
 function toggleShowAdmin() {
@@ -24,6 +23,18 @@ function toModify(pk){
 }
 
 function forModify(pk){
+
+
+
+    var id = $(document).find('.modifyAdmin').data("form");
+    // on récupère le bloc formulaire
+    var form = $("form[data-form=" + id + "]");
+    // on récupère son url
+    var url = form.attr("action");
+    // on appele notre fonction de check
+    ajaxForm(form, url);
+
+
     var classe = ".mod"+pk;
     $(document).find(classe).each(function (){
         $(this).prop("disabled", true);
@@ -34,15 +45,6 @@ function forModify(pk){
     $(document).find('.onModify').each(function (){
         $(this).addClass("hide");
     })
-
-
-    var id = $(document).find('.modifyAdmin').data("form");
-    // on récupère le bloc formulaire
-    var form = $("form[data-form=" + id + "]");
-    // on récupère son url
-    var url = form.attr("action");
-    // on appele notre fonction de check
-    ajaxForm(form, url);
 
 }
 // Fonction d'ajax
