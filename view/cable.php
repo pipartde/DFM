@@ -3,10 +3,11 @@
 
 include('../model/stock/read.php');
 
-$types = recupTypeForCat($_POST['pk_cat']);
+//$types = recupTypeForCat($_POST['pk_cat']);
+$types = recupTypeForCat(2);
 ?>
 
-<!-- File: ordinateur.php -->
+<!-- File: cable.php -->
 <?php
 foreach ($types as $type){
     ?><option value="<?= $type['pk_typ'] ?>"><?= $type['nom'] ?></option>

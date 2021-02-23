@@ -37,7 +37,8 @@ $selectValueProject.text($('#get_value_project').val());
 
 // Initialize Selectric and bind to 'change' event
 $('#get_value_category').selectric().on('change', function() {
-    $selectValueCategory.text($(this).val());
+    //$selectValueCategory.text($(this).val());
+    $('#get_value_type').selectric('destroy');
     if(($('#get_value_category').prop('selectedIndex'))!==0){
         $('#toshow').removeClass("hide");
         switch ($('#get_value_category').val()) {
@@ -45,6 +46,7 @@ $('#get_value_category').selectric().on('change', function() {
                 $.get('ordinateur.php', function (data) {
                     $('#get_value_type').append(data).selectric();
                 })
+
                 break;
             case "2":
                 var pk_cat = "2";
@@ -63,6 +65,9 @@ $('#get_value_category').selectric().on('change', function() {
                     error: function(response) {
                     }
                 });
+                break;
+            default:
+
         }
     } else {
         $('#toshow').addClass("hide");
@@ -71,7 +76,7 @@ $('#get_value_category').selectric().on('change', function() {
 
 });
 $('#get_value_type').selectric().on('change', function() {
-    $selectValueType.text($(this).val());
+    //$selectValueType.text($(this).val());
 });
 $('#get_value_marque').selectric().on('change', function() {
     $selectValueMarque.text($(this).val());
