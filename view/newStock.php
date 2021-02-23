@@ -35,9 +35,9 @@ include('../model/stock/read.php');
             </div>
 
 
-            <form action="" method="get" class="form-tri view">
+            <form action="" method="post" class="form-tri view">
                 <select class="choix" id="get_value_category" name="category">
-                    <option value="" disabled onfocus="">Catégorie</option>
+                    <option value="">Catégorie</option>
                     <?php
                     $listCategory = recupCategory();
                     foreach ($listCategory as $category){
@@ -48,18 +48,10 @@ include('../model/stock/read.php');
                     ?>
 
                 </select>
-                <select class="choix" id="get_value_type" name="category">
-                    <option value="">Type</option>
-                    <?php
-                    $listCategory = recupCategory();
-                    foreach ($listCategory as $category){
-                        ?>
-                        <option value="<?= $category['pk_cat'] ?>"><?= $category['nom'] ?></option>
-                        <?php
-                    }
-                    ?>
-
+                <div class="hide" id="toshow">
+                <select class="choix" id="get_value_type" name="type">
                 </select>
+                </div>
 
 
 

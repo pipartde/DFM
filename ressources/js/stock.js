@@ -38,6 +38,37 @@ $selectValueProject.text($('#get_value_project').val());
 // Initialize Selectric and bind to 'change' event
 $('#get_value_category').selectric().on('change', function() {
     $selectValueCategory.text($(this).val());
+    if(($('#get_value_category').prop('selectedIndex'))!==0){
+        $('#toshow').removeClass("hide");
+        switch ($('#get_value_category').val()) {
+            case "1":
+                $.get('ordinateur.php', function (data) {
+                    $('#get_value_type').append(data).selectric();
+                })
+                break;
+            case "2":
+                var pk_cat = "2";
+                $.ajax({
+                    // methode post
+                    type: "POST",
+                    // on passe notre variable avec le contenu du pk de la category
+                    data: pk_cat,
+                    // on appelle le fichier php
+                    url: 'cable.php',
+                    success: function(data) {
+                        // si le check php est un succès on apelle la fonction de succès et on enleve la class 'disabled' du bouton
+                        $('#get_value_type').append(data).selectric();
+
+                    },
+                    error: function(response) {
+                    }
+                });
+        }
+    } else {
+        $('#toshow').addClass("hide");
+    }
+
+
 });
 $('#get_value_type').selectric().on('change', function() {
     $selectValueType.text($(this).val());
@@ -54,17 +85,6 @@ $('#get_value_status').selectric().on('change', function() {
 $('#get_value_project').selectric().on('change', function() {
     $selectValueProject.text($(this).val());
 });
-
-
-//-------------------------------------------------------//
-// selection des item => newstock
-//-------------------------------------------------------//
-
-function forcategory(value) {
-    if (value !== ""){
-        $('#toshow').removeClass("hide");
-    }
-}
 
 
 
