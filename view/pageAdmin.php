@@ -52,7 +52,7 @@ include('include/head.php');
                     $pk = $admin['pk_adm'];
                     ?>
                     <tr>
-                        <form method="post" action="../controller/modifyAdmin.php" class="modifyAdmin" data-form="register">
+                        <form method="post" action="../controller/modifyAdmin.php" class="modifyAdmin<?= $admin['pk_adm'] ?> " data-form="register<?= $admin['pk_adm'] ?> ">
                             <td><div class="field"><input class="mod<?= $admin['pk_adm'] ?> " type="text" name="nom" disabled
                                                                 value="<?= htmlspecialchars($admin['nom']) ?>"></div></td>
                             <td><div class="field"><input class="mod<?= $admin['pk_adm'] ?>" type="text" name="prenom" disabled
@@ -89,6 +89,7 @@ include('include/head.php');
                                         <path d="m173.398438 154.703125c-5.523438 0-10 4.476563-10 10v189c0 5.519531 4.476562 10 10 10 5.523437 0 10-4.480469 10-10v-189c0-5.523437-4.476563-10-10-10zm0 0"/>
                                     </svg>
                                 </a></td>
+                            <td><?= $pk; ?></td>
                         </form>
                     </tr>
                 <?php } ?>
@@ -116,8 +117,6 @@ include('include/head.php');
 </div>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="../ressources/js/admin.js"></script>
 
 <!-- si la personne qui se log n'est pas un superAdmin, on hide les partie sensible -->
 <?php if (!$_SESSION['superadmin']) {
@@ -125,6 +124,10 @@ include('include/head.php');
     <script>toggleShowAdmin();</script>
     <?php
 } ?>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../ressources/js/admin.js"></script>
 
 
 </body>

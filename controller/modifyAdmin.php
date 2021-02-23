@@ -16,7 +16,7 @@ $listeAdmin = recupTousAdmin();
 $thisAdminBefore = recupInfoAdminPK($_POST['pkadmin']);
 $passDBbefore = recupPaswword($_POST['pkadmin']);
 
-
+echo $_POST['pkadmin'];
 
 if (empty($_POST['superadmin'])){
     $superadmin = false;

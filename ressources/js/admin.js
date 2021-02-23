@@ -7,6 +7,7 @@ function toggleShowAdmin() {
 }
 
 function toModify(pk){
+
     var classe = ".mod"+pk;
     $(document).find(classe).each(function (){
         $(this).prop("disabled", false);
@@ -23,12 +24,11 @@ function toModify(pk){
 }
 
 function forModify(pk){
-
-
-
-    var id = $(document).find('.modifyAdmin').data("form");
+    var mod = ".modifyAdmin"+pk;
+    var id = $(document).find(mod).data("form");
     // on récupère le bloc formulaire
     var form = $("form[data-form=" + id + "]");
+
     // on récupère son url
     var url = form.attr("action");
     // on appele notre fonction de check
@@ -49,11 +49,14 @@ function forModify(pk){
 }
 // Fonction d'ajax
 function ajaxForm(form, url) {
+    console.log(form);
 
-    var form = $(form);
-    var id_form = form.data("form");
+    //var form = $(form);
+    var id_form = form.attr("data-form");
+    console.log(id_form);
     // on passe les input du formulaire via la fonction serialize dans une variable
     var fields = form.serialize();
+    console.log(form.serialize());
     // appel ajax
     $.ajax({
         // methode post

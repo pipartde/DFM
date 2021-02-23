@@ -1,6 +1,6 @@
 <?php
 $username = "root";
-$password = "";             // selon que je suis sur mac/pc => nécessité ou non du password
+$password = "root";             // selon que je suis sur mac/pc => nécessité ou non du password
 $host = "localhost";
 $dbname = "dfm";
 
