@@ -29,7 +29,7 @@ $error = null;
 $errortype = null;
 
 if(empty($_POST['nom']) or empty($_POST['prenom']) or empty($_POST['email']) ){
-    $GLOBALS['error'] = "1";
+    $error = "1";
     $GLOBALS['errortype'] = "champs vide";
 } elseif ($_POST['nom'] === $thisAdminBefore['nom'] and $_POST['prenom'] === $thisAdminBefore['prenom'] and
     $_POST['email'] === $thisAdminBefore['email'] and empty($_POST['password']) and $superadmin === isSuperAdmin($_POST['pkadmin'])){
@@ -40,7 +40,10 @@ if(empty($_POST['nom']) or empty($_POST['prenom']) or empty($_POST['email']) ){
     $NewPrenom = $_POST['prenom'];
     $NewSuperadmin = $superadmin;
     if(empty($_POST['password'])){
-        updateAdmin($NewNom, $NewPrenom, $_POST['email'], $passDBbefore['password'],$thisAdminBefore['trigramme'],$_POST['pkadmin'],$superadmin);
+        $NewPass = $passDBbefore['password'];
+        $NewTrigramme = $thisAdminBefore['trigramme'];
+        $NewPkAdmin = $_POST['pkadmin'];
+        updateAdmin($NewNom, $NewPrenom, $_POST['email'], $passDBbefore['password'], $thisAdminBefore['trigramme'], $_POST['pkadmin'], $superadmin);
         echo "mdp vide ; update ok";
     } else {
         if(!verifMdp($_POST['password'])){
@@ -49,7 +52,9 @@ if(empty($_POST['nom']) or empty($_POST['prenom']) or empty($_POST['email']) ){
             echo "mauvais mdp format";
         } else {
             $_POST["password"] = password_hash($_POST["password"], PASSWORD_BCRYPT);
-            updateAdmin($NewNom, $NewPrenom, $_POST['email'], $_POST['password'], $thisAdminBefore['trigramme'], $_POST['pkadmin'],$superadmin);
+            $NewPass = $_POST['password'];
+
+            updateAdmin($NewNom, $NewPrenom, $_POST['email'], $_POST['password'], $thisAdminBefore['trigramme'], $_POST['pkadmin'], $superadmin);
             unset($_POST['password']);
             echo"mdp ok ; update ok";
         }

@@ -1,5 +1,13 @@
 <?php
 
+function checkEmptyArray($post){
+    foreach($post as $key => $elem){
+        if(empty($elem)){
+            return $GLOBALS['error']=$key.' vide !';
+        }
+    }
+}
+
 function htmlSpecialArray($post){
     foreach($post as $key => $elem){
         $_POST[$key] = htmlspecialchars($elem);
